@@ -82,6 +82,7 @@ configure_binaries() {
     SSD_UTIL=/usr/share/vboot/bin/ssd_util.sh
   elif [ -f "${SCRIPT_DIR}/lib/ssd_util.sh" ]; then
     SSD_UTIL="${SCRIPT_DIR}/lib/ssd_util.sh"
+    chmod +x "$SSD_UTIL"
   else
     quit "Cannot find the required ssd_util script. Please make sure you're executing this script inside the directory it resides in" 1
   fi
